@@ -4,7 +4,11 @@ jobs:
   init-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Start the Job
-        run: echo "Starting the Workflow Job 1"
-      - name: complete the job
-        run: echo "workflow test has beenc completed"
+    - name: Start the Job
+      run: |
+        echo "My Name is Pawan Kumar"
+        echo "Starting the Workflow Job 1"
+    - name: complete the job
+      run: |
+        echo "Task are completed"
+        echo "workflow test has been completed"
