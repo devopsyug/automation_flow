@@ -1,4 +1,4 @@
-name: test_flow_2
+name: test_flow_3
 on: push
 jobs:
   build_npm:
