@@ -1,0 +1,8 @@
+name: test_flow_2
+on: push
+jobs:
+  build_npm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code
+        uses: actions/checkout@v3
