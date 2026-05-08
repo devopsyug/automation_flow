@@ -1,0 +1,10 @@
+name: test_flow_1
+on: workflow_dispatch
+jobs:
+  init-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start the Job
+        run: echo "Starting the Workflow Job 1"
+      - name: complete the job
+        run: echo "workflow test has beenc completed"
