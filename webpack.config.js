@@ -12,8 +12,8 @@ module.exports = {
     },
     entry: './src/app/main.aot.ts',
     output: {
-        path: path.resolve(__dirname, 'src/dist'),
-        publicPath: 'src/dist/',
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: 'dist/',
         filename: 'app.main.js'
     },
     plugins: [

@@ -14,7 +14,7 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: package
-          path: src/dist
+          path: dist
   deploy_app:
     needs: build_npm
     runs-on: ubuntu-latest
