@@ -6,6 +6,15 @@ jobs:
     steps:
       - name: get code
         uses: actions/checkout@v3
+      - name: npm ci
+        run: npm ci
+      - name: npm build
+        run: npm run build
+      - name: upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: package
+          path: src/dist
   deploy_app:
     needs: build_npm
     runs-on: ubuntu-latest

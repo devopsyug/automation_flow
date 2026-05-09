@@ -1,0 +1,51 @@
+{
+    "name": "angular-helloworld",
+    "version": "1.0.0",
+    "description": "The Hello World project is an Angular 2+ starter project that has the npm modules,  configuration, scripts and folders and routing in place to make getting started  with an Angular project easy!",
+    "homepage": "https://github.com/danwahlin/angular-helloworld#readme",
+    "bugs": {
+        "url": "https://github.com/danwahlin/angular-helloworld/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/danwahlin/angular-helloworld.git"
+    },
+    "license": "ISC",
+    "author": "Dan Wahlin",
+    "type": "commonjs",
+    "main": "webpack.config.js",
+    "scripts": {
+        "tsc": "tsc",
+        "tsc:w": "tsc -w",
+        "build": "webpack --config webpack.config.js",
+        "start": "tsc && concurrently \"tsc -w\" \"lite-server\""
+    },
+    "dependencies": {
+        "@angular/common": "4.3.5",
+        "@angular/compiler": "4.3.5",
+        "@angular/compiler-cli": "4.3.5",
+        "@angular/core": "4.3.5",
+        "@angular/forms": "4.3.5",
+        "@angular/http": "4.3.5",
+        "@angular/platform-browser": "4.3.5",
+        "@angular/platform-browser-dynamic": "4.3.5",
+        "@angular/router": "4.3.5",
+        "@angular/tsc-wrapped": "4.3.5",
+        "@angular/upgrade": "4.3.5",
+        "@angular/platform-server": "4.3.5",
+        "@angular/animations": "4.3.5",
+        "systemjs": "0.20.18",
+        "core-js": "2.5.0",
+        "rxjs": "5.4.3",
+        "zone.js": "0.8.17"
+    },
+    "devDependencies": {
+        "typescript": "2.4.2",
+        "@types/node": "8.0.24",
+        "concurrently": "3.5.0",
+        "lite-server": "2.3.0",
+        "raw-loader": "0.5.1",
+        "webpack": "3.5.5",
+        "@ngtools/webpack": "1.6.2"
+    }
+}
