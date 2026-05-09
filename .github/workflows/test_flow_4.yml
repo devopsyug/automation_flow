@@ -1,5 +1,14 @@
 name: caching_pipeline
-on: push
+on: 
+  push:
+    branches:
+      - main
+env:
+  MONGODB_CLUSTER_ADDRESS: devopsyug.i74utwt.mongodb.net
+  MONGODB_USERNAME: db_user
+  MONGODB_PASSWORD: test@123
+  MONGODB_DB_NAME: devopsyug
+  PORT: 8080
 jobs:
   build_npm:
     runs-on: ubuntu-latest
@@ -13,6 +22,8 @@ jobs:
           key: ${{runner.os}}-${{ hashFiles('**/package-lock.json') }}
       - name: npm ci
         run: npm ci
+      - name: Run Tests
+        run: npm start &npx wait-on http://127.0.0.1:$PORT
       - name: npm build
         run: npm run build
       - name: upload artifact
@@ -35,3 +46,8 @@ jobs:
           key: ${{runner.os}}-${{ hashFiles('**/package-lock.json') }}
       - name: npm ci
         run: npm ci
+      - name: Outputs Variables
+        run: |
+          echo "Mongo Username: ${{ env.MONGODB_USERNAME }}"
+          echo "Mongo ClusterName: ${{ env.MONGODB_CLUSTER_ADDRESS }}"
+          echo "Mongo DB_NAME: ${{ env.MONGODB_DB_NAME }}"
