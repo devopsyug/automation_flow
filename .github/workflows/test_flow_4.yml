@@ -1,8 +1,10 @@
 name: caching_pipeline
 on: 
+  workflow_dispatch:
   push:
     branches:
       - main
+
 env:
   MONGODB_CLUSTER_ADDRESS: devopsyug.i74utwt.mongodb.net
   MONGODB_USERNAME: db_user
