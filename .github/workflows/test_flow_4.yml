@@ -6,13 +6,14 @@ on:
       - main
 
 env:
-  MONGODB_CLUSTER_ADDRESS: devopsyug.i74utwt.mongodb.net
-  MONGODB_USERNAME: db_user
-  MONGODB_PASSWORD: test@123
-  MONGODB_DB_NAME: devopsyug
   PORT: 8080
 jobs:
   build_npm:
+    env:
+      MONGODB_CLUSTER_ADDRESS: devopsyug.i74utwt.mongodb.net
+      MONGODB_USERNAME: db_user
+      MONGODB_PASSWORD: test@123
+      MONGODB_DB_NAME: devopsyug
     runs-on: ubuntu-latest
     steps:
       - name: get code
