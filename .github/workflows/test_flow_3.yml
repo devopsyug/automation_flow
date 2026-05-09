@@ -1,5 +1,5 @@
 name: test_flow_3
-on: push
+on: workflow_dispatch
 jobs:
   build_npm:
     runs-on: ubuntu-latest
